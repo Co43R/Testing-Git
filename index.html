@@ -6,144 +6,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prabhuraj Saidanawaru | Data Scientist Portfolio</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
             color: #333;
+            scroll-behavior: smooth;
+            background-color: #f4f4f9;
         }
 
+        /* Header Section */
         header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             background-color: #4CAF50;
             color: white;
-            padding: 20px 10%;
+            z-index: 1000;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav {
             text-align: center;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        header p {
-            margin: 5px 0;
-            font-size: 1.2em;
-        }
-
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        nav a {
+        header nav a {
             text-decoration: none;
-            color: #4CAF50;
+            color: white;
             margin: 0 15px;
+            font-size: 1.1em;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        header nav a:hover {
+            color: #ffdd57;
         }
 
+        /* Section Styles */
         section {
-            padding: 20px 10%;
+            padding: 100px 10%;
+            min-height: 100vh;
         }
 
         .section-title {
-            font-size: 1.8em;
+            font-size: 2em;
             color: #4CAF50;
             margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* About Section */
+        #about {
+            background-color: white;
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: #e8f5e9;
+        }
+
+        #skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #skills li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: white;
         }
 
         .project {
             border: 1px solid #ddd;
             padding: 15px;
-            margin-bottom: 15px;
             border-radius: 8px;
             background-color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .project h3 {
-            margin: 0;
+        .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #f1f8e9;
+        }
+
+        #contact p, #contact a {
+            font-size: 1.1em;
             color: #333;
         }
 
-        .project p {
-            margin: 5px 0;
+        #contact a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
+        #contact a:hover {
+            color: #ffdd57;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 10px;
             background-color: #4CAF50;
             color: white;
-            position: relative;
-        }
-
-        footer p {
-            margin: 5px 0;
         }
     </style>
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-        <h1>Prabhuraj Saidanawaru</h1>
-        <p>Data Scientist | AI Enthusiast | Problem Solver</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
+    <!-- About Section -->
     <section id="about">
         <h2 class="section-title">About Me</h2>
-        <p>Hello! I’m Prabhuraj Saidanawaru, a passionate Data Scientist with expertise in data analysis, machine learning, and artificial intelligence. I enjoy uncovering insights from data and building solutions that solve real-world problems. Welcome to my portfolio!</p>
+        <p class="section-subtitle">Hello! I’m Prabhuraj Saidanawaru, a Data Scientist passionate about using data to solve complex problems.</p>
+        <p>With expertise in machine learning, data analysis, and AI, I strive to create innovative solutions that drive impactful results. Welcome to my portfolio!</p>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title">Skills</h2>
         <ul>
-            <li>Programming: Python, R, SQL</li>
-            <li>Machine Learning: Scikit-learn, TensorFlow, PyTorch</li>
-            <li>Data Visualization: Matplotlib, Seaborn, Tableau</li>
-            <li>Big Data: Hadoop, Spark</li>
-            <li>Databases: MySQL, PostgreSQL</li>
+            <li><strong>Programming:</strong> Python, R, SQL</li>
+            <li><strong>Machine Learning:</strong> Scikit-learn, TensorFlow, PyTorch</li>
+            <li><strong>Data Visualization:</strong> Matplotlib, Seaborn, Tableau</li>
+            <li><strong>Big Data:</strong> Hadoop, Spark</li>
+            <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
         </ul>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <h2 class="section-title">Projects</h2>
-
         <div class="project">
-            <h3>1. Predicting House Prices</h3>
-            <p>Used machine learning algorithms to predict house prices based on various features. Achieved an accuracy of 92%.</p>
+            <h3>Predicting House Prices</h3>
+            <p>Developed a machine learning model that predicts house prices with 92% accuracy.</p>
         </div>
-
         <div class="project">
-            <h3>2. Customer Segmentation</h3>
-            <p>Performed clustering analysis to segment customers and enhance targeted marketing strategies for an e-commerce platform.</p>
+            <h3>Customer Segmentation</h3>
+            <p>Performed clustering analysis to segment customers and improve targeted marketing strategies.</p>
         </div>
-
         <div class="project">
-            <h3>3. Sentiment Analysis</h3>
-            <p>Developed a natural language processing model to analyze customer reviews and classify sentiments.</p>
+            <h3>Sentiment Analysis</h3>
+            <p>Built a natural language processing model to analyze customer reviews and classify sentiments.</p>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title">Contact</h2>
-        <p>Feel free to reach out to me for collaborations or inquiries!</p>
+        <p>Have a question or want to work together?</p>
         <p>Email: <a href="mailto:prabhuraj.saidanawaru@example.com">prabhuraj.saidanawaru@example.com</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/prabhuraj-saidanawaru" target="_blank">linkedin.com/in/prabhuraj-saidanawaru</a></p>
         <p>GitHub: <a href="https://github.com/prabhuraj-saidanawaru" target="_blank">github.com/prabhuraj-saidanawaru</a></p>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Prabhuraj Saidanawaru. All Rights Reserved.</p>
     </footer>
